@@ -23,25 +23,22 @@ themeBtn.addEventListener('click', () => {
 
 //toggle sidebar active
 
-const sidebarActive = document.querySelector('.sidebar');
+const sidebarActive = document.querySelectorAll('.sidebar-btn');
 
-sidebarActive.addEventListener('click', () => {
-    // sidebarActive.querySelector('a').classList.toggle('active');
-    // sidebarActive.querySelector('a').style.transition = "all 300ms ease";
-    // sidebarActive.querySelector('a:nth-child(2)').classList.toggle('active');
-    // sidebarActive.querySelector('a:nth-child(3)').classList.toggle('active');
-    // sidebarActive.querySelector('a:nth-child(4)').classList.toggle('active');
-    // sidebarActive.querySelector('a:nth-child(5)').classList.toggle('active');
-    // sidebarActive.querySelector('a:nth-child(6)').classList.toggle('active');
-    // sidebarActive.querySelector('a:last-child').classList.toggle('active');
-
-    // const callToActionBtns = document.querySelectorAll(".mobile__CTA--btn");
-
-    sidebarActive.forEach((sidebarActive) => {
-        sidebarActive.addEventListener("click", (e) => {
-            sidebarActive.forEach(f => f != e.target ? f.classList.remove('active') : '');
-            e.target.classList.toggle("active");
-        });
+sidebarActive.forEach((a) => {
+    a.addEventListener("click", (e) => {
+        sidebarActive.forEach(f => f.classList.remove('active'));
+            e.target.classList.toggle('active');
     });
-})
+});
 
+// sidebarActive.addEventListener('click', () => {
+//     // sidebarActive.querySelector('a').classList.toggle('active');
+//     // sidebarActive.querySelector('a').style.transition = "all 300ms ease";
+//     // sidebarActive.querySelector('a:nth-child(2)').classList.toggle('active');
+//     // sidebarActive.querySelector('a:nth-child(3)').classList.toggle('active');
+//     // sidebarActive.querySelector('a:nth-child(4)').classList.toggle('active');
+//     // sidebarActive.querySelector('a:nth-child(5)').classList.toggle('active');
+//     // sidebarActive.querySelector('a:nth-child(6)').classList.toggle('active');
+//     // sidebarActive.querySelector('a:last-child').classList.toggle('active');
+// })
