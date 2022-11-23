@@ -25,8 +25,8 @@ themeBtn.addEventListener('click', () => {
 
 const sidebarActive = document.querySelectorAll('.sidebar-btn');
 
-sidebarActive.forEach((a) => {
-    a.addEventListener("click", (e) => {
+sidebarActive.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
         sidebarActive.forEach(f => f.classList.remove('active'));
             e.target.classList.toggle('active');
     });
