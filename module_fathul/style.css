@@ -279,7 +279,7 @@ main aside .sidebar a span {
 main aside .sidebar a.active {
     background: var(--color-white);
     color: var(--color-primary);
-    border-radius: var(--border-radius-1);
+    border-radius: 1rem 0rem 0rem 1rem;
 }
 
 main aside .sidebar a.active:before {
@@ -325,6 +325,7 @@ main section.middle .cards>div {
     border-radius: var(--card-border-radius);
     margin-top: 3rem;
 }
+
 
 /* ======= MEDIA QUERIES FOR TABLETS (REPONSIVE DESIGN) ======== */
 
