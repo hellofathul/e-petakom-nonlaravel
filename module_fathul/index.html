@@ -20,6 +20,8 @@
 </head>
 
 <body>
+    <!------------------- MODUL FATHUL --------------------->
+    <!------------------- TOP NAVIGATION BAR --------------------->
     <nav>
         <div class="container">
             <img src="../images/logo.png" class="logo">
@@ -55,9 +57,12 @@
             </div>
         </div>
     </nav>
-    <!-- END OF NAVBAR -->
+    <!------------------- END OF NAVIGATION BAR --------------------->
 
+    <!------------------- MODUL FATHUL --------------------->
+    <!------------------- MAIN PAGE LAYOUT (3 COLUMN GRID SYSTEM) --------------------->
     <main>
+        <!------------------- START OF ASIDE PAGE LAYOUT (GRID COLUMN 1) --------------------->
         <aside>
             <button id="close-btn">
                 <span class="material-symbols-rounded">
@@ -65,6 +70,7 @@
                 </span>
             </button>
 
+            <!------------------- SIDEBAR --------------------->
             <div class="sidebar">
                 <a href="#" class="sidebar-btn active-sidebar-btn">
                     <span class="material-symbols-rounded">manage_accounts</span>
@@ -95,9 +101,11 @@
                     <h4>Bulletin</h4>
                 </a>
             </div>
-            <!-- END OF SIDEBAR -->
+            <!------------------- END OF SIDEBAR --------------------->
         </aside>
-        <!-- ----------- END OF ASIDE ------------->
+        <!------------------- END OF ASIDE (GRID COLUMN 1) --------------------->
+
+        <!------------------- START OF MIDDLE SECTION LAYOUT (GRID COLUMN 2) --------------------->
         <section class="middle">
             <div class="header">
                 <h1>Manage Profile</h1>
@@ -111,13 +119,21 @@
                 </div>
             </div>
         </section>
-        <!-- END OF MIDDLE -->
+        <!------------------- END OF MIDDLE SECTION LAYOUT (GRID COLUMN 2) --------------------->
+
+
+        <!------------------- START OF RIGHT SECTION LAYOUT (GRID COLUMN 3) --------------------->
         <section class="right">
 
         </section>
-        <!-- END OF RIGHT -->
+        <!------------------- END OF RIGHT SECTION LAYOUT (GRID COLUMN 3) --------------------->
+
+
     </main>
-    <!------------- END OF ASIDE------------->
+    <!------------------- END OF MAIN PAGE LAYOUT --------------------->
+
+
+    <!------------------- JAVASCRIPT & JQUERY --------------------->
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="main.js"></script>
     <script src="sidebar_toggle.js"></script>
