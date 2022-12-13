@@ -448,7 +448,7 @@ main section.middle__container .cards__container>.card__container>div>button {
 }
 
 .form-select {
-    /* background: var(--form-select-bg);
+    background: var(--form-select-bg);
     height: var(--form-select-height);
     width: var(--form-select-width);
     border: var(--form-select-border);
@@ -460,8 +460,7 @@ main section.middle__container .cards__container>.card__container>div>button {
     margin-top: var(--form-select-margin-top);
     cursor: var(--form-select-cursor);
     padding: var(--form-select-padding);
-    font-size: var(--form-select-font-size); */
-    $form-select-color: var(--color-primary);
+    font-size: var(--form-select-font-size);
 }
 
 /* main section.middle__container .cards__container>.card__container>.dropdown__container>.course__>select {
