@@ -1,9 +1,11 @@
 /* ROOT CSS VARIABLES */
 :root {
     --color-white: #ffffff;
+    --color-white-button: #ffffff;
     --color-light: #f0eff5;
     --color-gray-light: #86848c;
     --color-gray-dark: #56555e;
+    --color-gray-very-light: #D9D9D9;
     --color-dark: #27282f;
     --color-primary: #3c37ff;
     --color-success: rgb(34, 202, 75);
@@ -21,6 +23,7 @@
     --padding-2: 8px;
 
     --card-border-radius: 1.6rem;
+    --card-border-radius-2: 3rem;
     --border-radius-1: 1rem;
     --border-radius-2: 6px;
     --transition: all 200ms ease;
@@ -33,6 +36,8 @@
     --color-light: #23232a;
     --color-dark: #ddd;
     --color-gray-dark: #adacb5;
+    --color-gray-very-light: #2d2c2c;
+    --color-white-button: #f0eff5;
     transition: var(--transition-dark-theme);
 }
 
@@ -243,8 +248,8 @@ nav .profile-area button {
 
 main {
     display: grid;
-    grid-template-columns: 16rem auto 30rem;
-    gap: 2rem;
+    grid-template-columns: 16rem 20rem;
+    gap: 1rem;
     width: 96%;
     margin: 3rem auto 4rem;
 }
@@ -315,17 +320,134 @@ main section.middle .header {
 
 main section.middle .cards {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 3rem;
 }
 
 main section.middle .cards>div {
     background: var(--color-white);
     padding: var(--card-padding);
-    border-radius: var(--card-border-radius);
+    border-radius: var(--card-border-radius-2);
     margin-top: 3rem;
 }
 
+main section.middle .cards>.card>.double-input-field {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 1rem;
+}
+
+main section.middle .cards>.card>.double-dropdown {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    margin: 1rem;
+}
+
+main section.middle .cards>.card>.email-input-field {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 1rem;
+}
+
+main section.middle .cards>.card>.mobile-no {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 1rem;
+}
+
+main section.middle .cards>.card>.address {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 1rem;
+}
+
+main section.middle .cards>.card>.password {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 1rem;
+}
+
+main section.middle .cards>.card>.matric-id {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 1rem;
+}
+
+main section.middle .cards>.card>.dropdown {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 1rem;
+}
+
+main section.middle .cards>.card h4 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--color-dark);
+}
+
+main section.middle .cards>.card input {
+    height: 1rem;
+    background: transparent;
+    margin: 15px 0;
+    border: 2px solid var(--color-gray-very-light);
+    border-radius: var(--card-border-radius);
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-dark);
+    outline: none;
+    font-family: poppins, sans-serif;
+    padding: var(--card-padding);
+}
+
+main section.middle .cards>.card>.update-button-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    margin: 1rem;
+}
+
+main section.middle .cards>.card>div>button {
+    width: 150px;
+    height: 4rem;
+    border: none;
+    border-radius: var(--card-border-radius-2);
+    background: var(--color-primary);
+    color: var(--color-white-button);
+    font-family: poppins, sans-serif;
+    font-weight: 600;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+main section.middle .cards>.card>div>button:hover {
+    background: #2d28bb;
+    transition: var(--transition);
+}
+
+main section.middle .cards>.card input.active-input {
+    height: 1rem;
+    background: transparent;
+    margin: 15px 0;
+    border: 2px solid var(--color-primary);
+    border-radius: var(--card-border-radius-2);
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-dark);
+    outline: none;
+    font-family: poppins, sans-serif;
+    padding: var(--card-padding);
+}
+
+main section.middle .cards>.card input:hover {
+    border: 2px solid var(--color-primary);
+    transition: var(--transition);
+}
 
 /* ======= MEDIA QUERIES FOR TABLETS (REPONSIVE DESIGN) ======== */
 
