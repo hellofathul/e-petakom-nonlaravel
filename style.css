@@ -8,6 +8,7 @@
     --color-gray-very-light: #D9D9D9;
     --color-dark: #27282f;
     --color-primary: #3c37ff;
+    --color-primary-dropdown: #323645;
     --color-success: rgb(34, 202, 75);
     --color-danger: rgb(255, 67, 54);
     --color-warning: rgb(234, 181, 7);
@@ -28,6 +29,22 @@
     --border-radius-2: 6px;
     --transition: all 200ms ease;
     --transition-dark-theme: all 300ms ease;
+
+    --form-select-bg: #323645;
+    --form-select-width: 218px;
+    --form-select-height: 3.6rem;
+    --form-select-border: none;
+    --form-select-font-size: 1.1rem;
+    --form-select-border-radius: var(--card-border-radius-2);
+    --form-select-background: var(--color-primary-dropdown);
+    --form-select-color: var(--color-white-button);
+    --form-select-font-family: poppins, sans-serif;
+    --form-select-font-weight: 600;
+    --form-select-margin: 10px 0;
+    --form-select-cursor: pointer;
+    --form-select-margin-top: 1.2rem;
+    --form-select-padding: 1rem;
+
 }
 
 /* ------------------ DARK THEME VARIABLES ------------------*/
@@ -38,6 +55,7 @@
     --color-gray-dark: #adacb5;
     --color-gray-very-light: #2d2c2c;
     --color-white-button: #f0eff5;
+    --color-primary-dropdown: #2d2c2c;
     transition: var(--transition-dark-theme);
 }
 
@@ -149,13 +167,13 @@ small {
 
 /* ------------------ NAV BAR ------------------*/
 
-nav {
+.navigation__bar {
     width: 100%;
     background: var(--color-white);
     padding: 1rem 0;
 }
 
-nav .container {
+.navigation__bar .navigation__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -164,11 +182,11 @@ nav .container {
     margin: 0 auto;
 }
 
-nav img.logo {
+.navigation__bar img.logo {
     width: 9rem;
 }
 
-nav .search-bar {
+.navigation__bar .search__bar {
     background: var(--color-light);
     padding: var(--padding-2) var(--card-padding);
     width: 32vw;
@@ -181,24 +199,24 @@ nav .search-bar {
     left: 14.7%;
 }
 
-nav .search-bar input[type="search"] {
+.navigation__bar .search__bar input[type="search"] {
     color: var(--color-dark);
     background: transparent;
     width: 100%;
 }
 
-nav .search-bar input[type="search"]::placeholder {
+.navigation__bar .search__bar input[type="search"]::placeholder {
     color: var(--color-gray-dark);
 }
 
-nav .profile-area {
+.navigation__bar .profile__area {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 4rem;
 }
 
-nav .profile-area .theme-btn {
+.navigation__bar .profile__area .theme__btn {
     display: flex;
     background: var(--color-light);
     width: 5rem;
@@ -207,7 +225,7 @@ nav .profile-area .theme-btn {
     cursor: pointer;
 }
 
-nav .profile-area .theme-btn span {
+.navigation__bar .profile__area .theme__btn span {
     width: 50%;
     height: 100%;
     display: flex;
@@ -216,23 +234,23 @@ nav .profile-area .theme-btn span {
     font-size: 1.3rem;
 }
 
-nav .profile-area .theme-btn .active-theme {
+.navigation__bar .profile__area .theme__btn .active-theme {
     background: var(--color-dark);
     border-radius: var(--border-radius-2);
     color: var(--color-white);
 }
 
-nav .theme-btn .active-theme {
+.navigation__bar .theme__btn .active-theme {
     transition: all 300ms ease;
 }
 
-nav .profile-area .profile {
+.navigation__bar .profile__area .profile__container {
     display: flex;
     gap: 1rem;
     align-items: center;
 }
 
-nav .profile-area .profile-photo {
+.navigation__bar .profile__area .profile__photo {
     display: block;
     width: 3rem;
     height: 3rem;
@@ -240,7 +258,7 @@ nav .profile-area .profile-photo {
     overflow: hidden;
 }
 
-nav .profile-area button {
+.navigation__bar .profile__area button {
     display: none;
 }
 
@@ -262,32 +280,33 @@ main aside {
 }
 
 /* WILL BE SHOWN ONLY ON MOBILE AND TABLET */
-main aside button#close-btn {
+main aside button#close__btn {
     display: none;
 }
 
-main aside .sidebar a {
+main aside .sidebar__container a {
     display: flex;
     align-items: center;
     gap: 1.2rem;
     height: 5rem;
     color: var(--color-gray-light);
     position: relative;
+    text-decoration: none;
 }
 
-main aside .sidebar a span {
+main aside .sidebar__container a span {
     font-size: 1.7rem;
     margin-left: 3rem;
     transition: all 300ms ease;
 }
 
-main aside .sidebar a.active-sidebar-btn {
+main aside .sidebar__container a.active-sidebar-btn {
     background: var(--color-white);
     color: var(--color-primary);
     border-radius: 1rem 0rem 0rem 1rem;
 }
 
-main aside .sidebar a.active-sidebar-btn:before {
+main aside .sidebar__container a.active-sidebar-btn:before {
     content: '';
     width: 20px;
     height: 100%;
@@ -296,98 +315,103 @@ main aside .sidebar a.active-sidebar-btn:before {
     border-radius: 1rem 0rem 0rem 1rem;
 }
 
-main aside .sidebar a:hover {
+main aside .sidebar__container a:hover {
     color: var(--color-primary);
 }
 
-main aside .sidebar a:hover span {
+main aside .sidebar__container a:hover span {
     margin-left: 2rem;
 }
 
-main aside .sidebar h4 {
+main aside .sidebar__container h4 {
     font-weight: 500;
 }
 
-main section.middle {
+main section.middle__container {
     margin-left: 3rem;
 }
 
-main section.middle .header {
+main section.middle__container .header__container {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 
-main section.middle .cards {
+main section.middle__container .cards__container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 3rem;
 }
 
-main section.middle .cards>div {
+main section.middle__container .cards__container>div {
     background: var(--color-white);
     padding: var(--card-padding);
     border-radius: var(--card-border-radius-2);
     margin-top: 3rem;
 }
 
-main section.middle .cards>.card>.double-input-field {
+main section.middle__container .cards__container>.card__container>.double__input__field {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     margin: 1rem;
 }
 
-main section.middle .cards>.card>.double-dropdown {
+main section.middle__container .cards__container>.card__container>.double__dropdown {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
     margin: 1rem;
 }
 
-main section.middle .cards>.card>.email-input-field {
+/* main section.middle__container .cards__container>.card__container>.double__dropdown>.semester__dropdown>.semester__option>option {
+    justify-content: center;
+    align-items: center;
+} */
+
+main section.middle__container .cards__container>.card__container>.email__input__field {
     display: grid;
     grid-template-columns: 1fr;
     margin: 1rem;
 }
 
-main section.middle .cards>.card>.mobile-no {
+main section.middle__container .cards__container>.card__container>.mobile__no {
     display: grid;
     grid-template-columns: 1fr;
     margin: 1rem;
 }
 
-main section.middle .cards>.card>.address {
+main section.middle__container .cards__container>.card__container>.address__ {
     display: grid;
     grid-template-columns: 1fr;
     margin: 1rem;
 }
 
-main section.middle .cards>.card>.password {
+main section.middle__container .cards__container>.card__container>.password__ {
     display: grid;
     grid-template-columns: 1fr;
     margin: 1rem;
 }
 
-main section.middle .cards>.card>.matric-id {
+main section.middle__container .cards__container>.card__container>.matric__id {
     display: grid;
     grid-template-columns: 1fr;
     margin: 1rem;
 }
 
-main section.middle .cards>.card>.dropdown {
+main section.middle__container .cards__container>.card__container>.dropdown__container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 1rem;
 }
 
-main section.middle .cards>.card h4 {
+main section.middle__container .cards__container>.card__container h4 {
     font-size: 1.2rem;
     font-weight: 500;
     color: var(--color-dark);
 }
 
-main section.middle .cards>.card input {
+main section.middle__container .cards__container>.card__container input {
     height: 1rem;
     background: transparent;
     margin: 15px 0;
@@ -403,14 +427,14 @@ main section.middle .cards>.card input {
     padding: var(--card-padding);
 }
 
-main section.middle .cards>.card>.update-button-container {
+main section.middle__container .cards__container>.card__container>.update__button__container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 3rem;
     margin: 1rem;
 }
 
-main section.middle .cards>.card>div>button {
+main section.middle__container .cards__container>.card__container>div>button {
     width: 150px;
     height: 4rem;
     border: none;
@@ -423,12 +447,38 @@ main section.middle .cards>.card>div>button {
     cursor: pointer;
 }
 
-main section.middle .cards>.card>div>button:hover {
+.form-select {
+    /* background: var(--form-select-bg);
+    height: var(--form-select-height);
+    width: var(--form-select-width);
+    border: var(--form-select-border);
+    border-radius: var(--form-select-border-radius);
+    background: var(--form-select-background);
+    color: var(--form-select-color);
+    font-family: var(--form-select-font-family);
+    font-weight: var(--form-select-font-weight);
+    margin-top: var(--form-select-margin-top);
+    cursor: var(--form-select-cursor);
+    padding: var(--form-select-padding);
+    font-size: var(--form-select-font-size); */
+    $form-select-color: var(--color-primary);
+}
+
+/* main section.middle__container .cards__container>.card__container>.dropdown__container>.course__>select {
+    padding: 1rem;
+} */
+
+
+.form-override {
+    appearance: auto !important;
+}
+
+main section.middle__container .cards__container>.card__container>div>button:hover {
     background: #2d28bb;
     transition: var(--transition);
 }
 
-main section.middle .cards>.card input.active-input {
+main section.middle__container .cards__container>.card__container input.active-input {
     height: 1rem;
     background: transparent;
     margin: 15px 0;
@@ -444,10 +494,11 @@ main section.middle .cards>.card input.active-input {
     padding: var(--card-padding);
 }
 
-main section.middle .cards>.card input:hover {
+main section.middle__container .cards__container>.card__container input:hover {
     border: 2px solid var(--color-primary);
     transition: var(--transition);
 }
+
 
 /* ======= MEDIA QUERIES FOR TABLETS (REPONSIVE DESIGN) ======== */
 
@@ -515,7 +566,7 @@ main section.middle .cards>.card input:hover {
         margin-top: 3rem;
     }
 
-    main section.middle .cards {
+    main section.middle__container .cards__container {
         grid-template-columns: 1fr 1fr;
     }
 
@@ -542,7 +593,7 @@ main section.middle .cards>.card input:hover {
         display: none;
     }
 
-    main section.middle .cards {
+    main section.middle__container .cards__container {
         grid-template-columns: 1fr;
         margin-right: 2rem;
     }

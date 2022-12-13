@@ -1,6 +1,6 @@
 //show or hide sidebar
-const menuBtn = document.querySelector('#menu-btn');
-const closeBtn = document.querySelector('#close-btn');
+const menuBtn = document.querySelector('#menu__btn');
+const closeBtn = document.querySelector('#close__btn');
 const sidebar = document.querySelector('aside');
 const inputActive = document.querySelector('.card input');
 
@@ -14,7 +14,7 @@ closeBtn.addEventListener('click', () => {
 })
 
 //theme change functionality
-const themeBtn = document.querySelector('.theme-btn');
+const themeBtn = document.querySelector('.theme__btn');
 
 themeBtn.addEventListener('click', () => {
     document.body.classList.toggle('dark-theme');
