@@ -43,14 +43,14 @@ $(function () {
 $(document).ready(function(){
     $('.show').on('click', function(){
         $('.input2').attr('type', 'text');
-        $('.show').addClass('active')
-        $('.hide').removeClass('active')
+        $('.show').addClass('eye-active')
+        $('.hide').removeClass('eye-active')
     })
 
     $('.hide').on('click', function(){
         $('.input2').attr('type', 'password');
-        $('.hide').addClass('active')
-        $('.show').removeClass('active')
+        $('.hide').addClass('eye-active')
+        $('.show').removeClass('eye-active')
     })
 });
 

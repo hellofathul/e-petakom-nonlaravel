@@ -25,17 +25,19 @@
 
     --card-border-radius: 1.6rem;
     --card-border-radius-2: 3rem;
+    --card-border-radius-3: 0.5rem;
     --border-radius-1: 1rem;
     --border-radius-2: 6px;
     --transition: all 200ms ease;
     --transition-dark-theme: all 300ms ease;
 
     --form-select-bg: #323645;
-    --form-select-width: 218px;
+    --form-select-width: 50px;
     --form-select-height: 3.6rem;
     --form-select-border: none;
     --form-select-font-size: 1.1rem;
     --form-select-border-radius: var(--card-border-radius-2);
+    --form-select-border-radius-2: var(--card-border-radius-3);
     --form-select-background: var(--color-primary-dropdown);
     --form-select-color: var(--color-white-button);
     --form-select-font-family: poppins, sans-serif;
@@ -120,11 +122,6 @@ small {
     font-size: 0.77rem;
 }
 
-.input1 {
-    display: flex;
-    align-items: center;
-}
-
 input::-ms-reveal {
     display: none;
 }
@@ -135,11 +132,12 @@ span.hide {
     width: 20px;
     height: 20px;
     position: relative;
-    right: 40px;
+    left: 420px;
+    bottom: 47px;
     cursor: pointer;
 }
 
-.active {
+.eye-active {
     display: none;
 }
 
@@ -147,7 +145,9 @@ span.show {
     width: 20px;
     height: 20px;
     position: relative;
-    right: 40px;
+    left: 420px;
+    bottom: 47px;
+
     cursor: pointer;
 }
 
@@ -392,6 +392,7 @@ main section.middle__container .main__container>.tertiary__container {
     display: grid;
     grid-template-rows: 1fr 1fr;
     gap: 3rem;
+    margin-top: 3rem;
 }
 
 main section.middle__container .main__container>.tertiary__container>div {
@@ -413,6 +414,7 @@ main section.middle__container .main__container>.secondary__container>.address__
     margin: 1rem;
 }
 
+
 main section.middle__container .main__container>.secondary__container>.password__ {
     display: grid;
     grid-template-columns: 1fr;
@@ -423,6 +425,12 @@ main section.middle__container .main__container>.tertiary__container>.fourth__co
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
+    margin: 1rem;
+}
+
+main section.middle__container .main__container>.tertiary__container>.fourth__container>.course__dropdown {
+    display: grid;
+    grid-template-columns: 1fr;
     margin: 1rem;
 }
 
@@ -497,8 +505,8 @@ main section.middle__container .main__container input.active-input {
     height: 1rem;
     background: transparent;
     margin: 15px 0;
-    border: 2px solid var(--color-primary);
-    border-radius: var(--card-border-radius-2);
+    border: 2px solid var(--color-warning);
+    border-radius: var(--card-border-radius-3);
     display: flex;
     align-items: center;
     font-size: 1.1rem;
@@ -510,7 +518,7 @@ main section.middle__container .main__container input.active-input {
 }
 
 main section.middle__container .main__container input:hover {
-    border: 2px solid var(--color-primary);
+    border: 2px solid var(--color-warning);
     transition: var(--transition);
 }
 
