@@ -1,0 +1,147 @@
+main section.middle__container .cards__container>.card__container>.double__input__field {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 1rem;
+}
+
+main section.middle__container .cards__container>.card__container>.double__dropdown {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    margin: 1rem;
+}
+
+/* main section.middle__container .cards__container>.card__container>.double__dropdown>.semester__dropdown>.semester__option>option {
+    justify-content: center;
+    align-items: center;
+} */
+
+main section.middle__container .cards__container>.card__container>.email__input__field {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 1rem;
+}
+
+main section.middle__container .cards__container>.card__container>.mobile__no {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 1rem;
+}
+
+main section.middle__container .cards__container>.card__container>.address__ {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 1rem;
+}
+
+main section.middle__container .cards__container>.card__container>.password__ {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 1rem;
+}
+
+main section.middle__container .cards__container>.card__container>.matric__id {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 1rem;
+}
+
+main section.middle__container .cards__container>.card__container>.dropdown__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 1rem;
+}
+
+main section.middle__container .cards__container>.card__container h4 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--color-dark);
+}
+
+main section.middle__container .cards__container>.card__container input {
+    height: 1rem;
+    background: transparent;
+    margin: 15px 0;
+    border: 2px solid var(--color-gray-very-light);
+    border-radius: var(--card-border-radius);
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-dark);
+    outline: none;
+    font-family: poppins, sans-serif;
+    padding: var(--card-padding);
+}
+
+main section.middle__container .cards__container>.card__container>.update__button__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    margin: 1rem;
+}
+
+main section.middle__container .cards__container>.card__container>div>button {
+    width: 150px;
+    height: 4rem;
+    border: none;
+    border-radius: var(--card-border-radius-2);
+    background: var(--color-primary);
+    color: var(--color-white-button);
+    font-family: poppins, sans-serif;
+    font-weight: 600;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.form-select {
+    background: var(--form-select-bg);
+    height: var(--form-select-height);
+    width: var(--form-select-width);
+    border: var(--form-select-border);
+    border-radius: var(--form-select-border-radius);
+    background: var(--form-select-background);
+    color: var(--form-select-color);
+    font-family: var(--form-select-font-family);
+    font-weight: var(--form-select-font-weight);
+    margin-top: var(--form-select-margin-top);
+    cursor: var(--form-select-cursor);
+    padding: var(--form-select-padding);
+    font-size: var(--form-select-font-size);
+}
+
+/* main section.middle__container .cards__container>.card__container>.dropdown__container>.course__>select {
+    padding: 1rem;
+} */
+
+
+.form-override {
+    appearance: auto !important;
+}
+
+main section.middle__container .cards__container>.card__container>div>button:hover {
+    background: #2d28bb;
+    transition: var(--transition);
+}
+
+main section.middle__container .cards__container>.card__container input.active-input {
+    height: 1rem;
+    background: transparent;
+    margin: 15px 0;
+    border: 2px solid var(--color-primary);
+    border-radius: var(--card-border-radius-2);
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-dark);
+    outline: none;
+    font-family: poppins, sans-serif;
+    padding: var(--card-padding);
+}
+
+main section.middle__container .cards__container>.card__container input:hover {
+    border: 2px solid var(--color-primary);
+    transition: var(--transition);
+}

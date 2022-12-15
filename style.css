@@ -120,6 +120,40 @@ small {
     font-size: 0.77rem;
 }
 
+.input1 {
+    display: flex;
+    align-items: center;
+}
+
+input::-ms-reveal {
+    display: none;
+}
+
+/* Change here */
+
+span.hide {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    right: 40px;
+    cursor: pointer;
+}
+
+.active {
+    display: none;
+}
+
+span.show {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    right: 40px;
+    cursor: pointer;
+}
+
+/* Change here */
+
+
 .text-muted {
     color: var(--color-gray-light);
 }
@@ -337,81 +371,68 @@ main section.middle__container .header__container {
     gap: 1rem;
 }
 
-main section.middle__container .cards__container {
+main section.middle__container .header__container h1 {
+    font-weight: 650;
+}
+
+main section.middle__container .main__container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 3rem;
 }
 
-main section.middle__container .cards__container>div {
+main section.middle__container .main__container>.secondary__container {
     background: var(--color-white);
     padding: var(--card-padding);
     border-radius: var(--card-border-radius-2);
     margin-top: 3rem;
 }
 
-main section.middle__container .cards__container>.card__container>.double__input__field {
+main section.middle__container .main__container>.tertiary__container {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 3rem;
+}
+
+main section.middle__container .main__container>.tertiary__container>div {
+    background: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius-2);
+}
+
+main section.middle__container .main__container>.secondary__container>.double__input__field {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     margin: 1rem;
 }
 
-main section.middle__container .cards__container>.card__container>.double__dropdown {
+main section.middle__container .main__container>.secondary__container>.address__ {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    margin: 1rem;
+}
+
+main section.middle__container .main__container>.secondary__container>.password__ {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 1rem;
+}
+
+main section.middle__container .main__container>.tertiary__container>.fourth__container>.triple__dropdown {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 2rem;
     margin: 1rem;
 }
 
-/* main section.middle__container .cards__container>.card__container>.double__dropdown>.semester__dropdown>.semester__option>option {
-    justify-content: center;
-    align-items: center;
-} */
-
-main section.middle__container .cards__container>.card__container>.email__input__field {
-    display: grid;
-    grid-template-columns: 1fr;
-    margin: 1rem;
-}
-
-main section.middle__container .cards__container>.card__container>.mobile__no {
-    display: grid;
-    grid-template-columns: 1fr;
-    margin: 1rem;
-}
-
-main section.middle__container .cards__container>.card__container>.address__ {
-    display: grid;
-    grid-template-columns: 1fr;
-    margin: 1rem;
-}
-
-main section.middle__container .cards__container>.card__container>.password__ {
-    display: grid;
-    grid-template-columns: 1fr;
-    margin: 1rem;
-}
-
-main section.middle__container .cards__container>.card__container>.matric__id {
-    display: grid;
-    grid-template-columns: 1fr;
-    margin: 1rem;
-}
-
-main section.middle__container .cards__container>.card__container>.dropdown__container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 1rem;
-}
-
-main section.middle__container .cards__container>.card__container h4 {
+main section.middle__container .main__container h4 {
     font-size: 1.2rem;
     font-weight: 500;
     color: var(--color-dark);
 }
 
-main section.middle__container .cards__container>.card__container input {
+main section.middle__container .main__container input {
     height: 1rem;
     background: transparent;
     margin: 15px 0;
@@ -427,14 +448,14 @@ main section.middle__container .cards__container>.card__container input {
     padding: var(--card-padding);
 }
 
-main section.middle__container .cards__container>.card__container>.update__button__container {
+main section.middle__container .main__container>.secondary__container>.update__button__container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 3rem;
     margin: 1rem;
 }
 
-main section.middle__container .cards__container>.card__container>div>button {
+main section.middle__container .main__container>.secondary__container>div>button {
     width: 150px;
     height: 4rem;
     border: none;
@@ -463,21 +484,16 @@ main section.middle__container .cards__container>.card__container>div>button {
     font-size: var(--form-select-font-size);
 }
 
-/* main section.middle__container .cards__container>.card__container>.dropdown__container>.course__>select {
-    padding: 1rem;
-} */
-
-
 .form-override {
     appearance: auto !important;
 }
 
-main section.middle__container .cards__container>.card__container>div>button:hover {
+main section.middle__container .main__container>.secondary__container>div>button:hover {
     background: #2d28bb;
     transition: var(--transition);
 }
 
-main section.middle__container .cards__container>.card__container input.active-input {
+main section.middle__container .main__container input.active-input {
     height: 1rem;
     background: transparent;
     margin: 15px 0;
@@ -493,11 +509,10 @@ main section.middle__container .cards__container>.card__container input.active-i
     padding: var(--card-padding);
 }
 
-main section.middle__container .cards__container>.card__container input:hover {
+main section.middle__container .main__container input:hover {
     border: 2px solid var(--color-primary);
     transition: var(--transition);
 }
-
 
 /* ======= MEDIA QUERIES FOR TABLETS (REPONSIVE DESIGN) ======== */
 
@@ -565,7 +580,7 @@ main section.middle__container .cards__container>.card__container input:hover {
         margin-top: 3rem;
     }
 
-    main section.middle__container .cards__container {
+    main section.middle__container .main__container {
         grid-template-columns: 1fr 1fr;
     }
 
@@ -592,7 +607,7 @@ main section.middle__container .cards__container>.card__container input:hover {
         display: none;
     }
 
-    main section.middle__container .cards__container {
+    main section.middle__container .main__container {
         grid-template-columns: 1fr;
         margin-right: 2rem;
     }

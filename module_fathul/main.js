@@ -40,5 +40,18 @@ $(function () {
     });
 });
 
+$(document).ready(function(){
+    $('.show').on('click', function(){
+        $('.input2').attr('type', 'text');
+        $('.show').addClass('active')
+        $('.hide').removeClass('active')
+    })
+
+    $('.hide').on('click', function(){
+        $('.input2').attr('type', 'password');
+        $('.hide').addClass('active')
+        $('.show').removeClass('active')
+    })
+});
 
 
